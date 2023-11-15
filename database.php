@@ -82,6 +82,19 @@ if (mysqli_query($conn, $sql_insert_values)) {
 }
 
 
+// SQL to insert values into the Annonce table
+$sql_insert_values_an = "
+INSERT INTO Annonce (title, description)
+VALUES ('Title1', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'),
+       ('Title2', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.')";
+
+if (mysqli_query($conn, $sql_insert_values_an)) {
+    echo "Values inserted successfully in Annonce";
+} else {
+    echo "Error inserting values: " . mysqli_error($conn);
+}
+
+
 // Close the database connection
 mysqli_close($conn);
 
