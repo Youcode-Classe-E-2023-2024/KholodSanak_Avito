@@ -67,8 +67,8 @@ body {
 
 <section class="buttons">
     <button id="btn" onclick="location.href='add_annonce.php'"> Add annonce</button>
-    <button id="btn"> Modify annonce</button>
-    <button id="btn"> Delete annonce</button>
+    <button id="btn" onclick="location.href='modify_annonce.php'"> Modify annonce</button>
+    <button id="btn" onclick="location.href='delete_annonce.php'"> Delete annonce</button>
 </section>
 
 <h2>List of Annonces</h2>

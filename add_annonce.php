@@ -7,7 +7,7 @@ mysqli_select_db($conn, 'avito_test');
 // Handle add, modify, or delete annonces logic here
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["add_annonce"])) {
-        // Add annonce logic goes here
+        // Add annonce
         $title = mysqli_real_escape_string($conn, $_POST["title"]);
         $description = mysqli_real_escape_string($conn, $_POST["description"]);
         $image = mysqli_real_escape_string($conn, $_POST["image"]);
