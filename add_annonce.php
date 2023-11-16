@@ -49,5 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <input type="submit" name="add_annonce" value="Add Annonce">
 </form>
+<p><a href="index.php">Back to Home</a></p>
 </body>
 </html>
