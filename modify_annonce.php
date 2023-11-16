@@ -1,7 +1,6 @@
 <?php
 include("config.php");
 
-
 // Select the created or existing database
 mysqli_select_db($conn, 'avito_test');
 
@@ -9,29 +8,18 @@ mysqli_select_db($conn, 'avito_test');
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modify_annonce"])) {
 
     // Check if all form fields are set
-    if (isset($_POST["annonce_id"], $_POST["new_title"], $_POST["new_description"], $_POST["new_image"])) {
-        // Get values from the form
-        $annonce_id = mysqli_real_escape_string($conn, $_POST["annonce_id"]);
-        $new_title = mysqli_real_escape_string($conn, $_POST["new_title"]);
-        $new_description = mysqli_real_escape_string($conn, $_POST["new_description"]);
-        $new_image = mysqli_real_escape_string($conn, $_POST["new_image"]);
+    $annonce_id = mysqli_real_escape_string($conn, $_POST["annonce_id"]);
+    $new_title = mysqli_real_escape_string($conn, $_POST["new_title"]);
+    $new_description = mysqli_real_escape_string($conn, $_POST["new_description"]);
+    $new_image = mysqli_real_escape_string($conn, $_POST["new_image"]);
 
-        // Check for empty values
-        if (!empty($annonce_id) && !empty($new_title) && !empty($new_description) && !empty($new_image)) {
-            // Modify annonce
-            $sql_modify_annonce = "UPDATE Annonces SET title='$new_title', description='$new_description', image='$new_image' WHERE id_annonce='$annonce_id'";
-            $result_modify_annonce = mysqli_query($conn, $sql_modify_annonce);
+    $sql_modify_annonce = "UPDATE annonces SET title='$new_title', description='$new_description', image='$new_image' WHERE id_annonce='$annonce_id'";
+    $result_modify_annonce = mysqli_query($conn, $sql_modify_annonce);
 
-            if ($result_modify_annonce) {
-                echo "Annonce modified successfully!";
-            } else {
-                echo "Error modifying annonce: " . mysqli_error($conn);
-            }
-        } else {
-            echo "All form fields are required.";
-        }
+    if ($result_modify_annonce) {
+        echo "Annonce modified successfully!";
     } else {
-        echo "Invalid form submission.";
+        echo "Error modifying annonce: " . mysqli_error($conn);
     }
 }
 ?>
@@ -66,3 +54,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modify_annonce"])) {
 <p><a href="index.php">Back to Home</a></p>
 </body>
 </html>
+
+
