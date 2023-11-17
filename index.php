@@ -61,6 +61,16 @@ body {
         .buttons{
             display: flex;
             flex-direction: row-reverse;
+            margin-right: 20px;
+        }
+        #btn{
+            margin-right: 20px;
+            padding: 10px 10px;
+            background-color: #3949AB;
+            color:white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
