@@ -11,6 +11,7 @@ try {
 } catch (mysqli_sql_exception) {
     echo "Not connected: ";
 }
+//check connection
 if($conn){
     echo "You are connected !";
 }
@@ -19,7 +20,8 @@ else{
 }
 
 // Create database
-$sql_create_db = "CREATE DATABASE IF NOT EXISTS avito_test";
+$sql_create_db = "CREATE DATABASE IF NOT EXISTS avito";
+
 if (mysqli_query($conn, $sql_create_db)) {
     echo "Database created successfully";
 } else {

@@ -3,7 +3,7 @@
 include("config.php");
 
 // Select the created or existing database
-mysqli_select_db($conn, 'avito_test');
+mysqli_select_db($conn, 'avito');
 
 // Fetch annonces from the database
 $sql_fetch_annonces = "SELECT * FROM Annonces";

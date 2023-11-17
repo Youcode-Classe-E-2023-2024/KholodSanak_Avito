@@ -2,17 +2,21 @@
 include("config.php");
 
 // Select the created or existing database
-mysqli_select_db($conn, 'avito_test');
+mysqli_select_db($conn, 'avito');
 
-// Handle add, modify, or delete annonces logic here
+/*
+ * ($_SERVER["REQUEST_METHOD"] == "POST") checks if the current request method is "POST."
+ * checks if the form has been submitted with the button named "modify_annonce."
+ */
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modify_annonce"])) {
 
-    // Check if all form fields are set
+    // Sanitize user input: Escape special characters in the "title" received from a form POST request
     $annonce_id = mysqli_real_escape_string($conn, $_POST["annonce_id"]);
     $new_title = mysqli_real_escape_string($conn, $_POST["new_title"]);
     $new_description = mysqli_real_escape_string($conn, $_POST["new_description"]);
     $new_image = mysqli_real_escape_string($conn, $_POST["new_image"]);
 
+    // Update annonce
     $sql_modify_annonce = "UPDATE annonces SET title='$new_title', description='$new_description', image='$new_image' WHERE id_annonce='$annonce_id'";
     $result_modify_annonce = mysqli_query($conn, $sql_modify_annonce);
 

@@ -2,13 +2,16 @@
 include("config.php");
 
 // Select the created or existing database
-mysqli_select_db($conn, 'avito_test');
+mysqli_select_db($conn, 'avito');
 
-// Handle add, modify, or delete annonces logic here
+/*
+ * ($_SERVER["REQUEST_METHOD"] == "POST") checks if the current request method is "POST."
+ * checks if the form has been submitted with the button named "delete_annonce."
+ */
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_annonce"])) {
-// Delete annonce logic goes here
-    $annonce_id_to_delete = mysqli_real_escape_string($conn, $_POST["annonce_id_to_delete"]);
 
+    // Sanitize user input: Escape special characters in the "title" received from a form POST request
+    $annonce_id_to_delete = mysqli_real_escape_string($conn, $_POST["annonce_id_to_delete"]);
     $sql_delete_annonce = "DELETE FROM annonces WHERE id_annonce='$annonce_id_to_delete'";
     $result_delete_annonce = mysqli_query($conn, $sql_delete_annonce);
 

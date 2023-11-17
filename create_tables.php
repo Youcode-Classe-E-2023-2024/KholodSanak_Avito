@@ -2,7 +2,7 @@
 include("config.php");
 
 // Select the created or existing database
-mysqli_select_db($conn, 'avito_test');
+mysqli_select_db($conn, 'avito');
 
 // SQL to create table Client
 $sql_create_table_client = "
@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS Client (
     password VARCHAR(100) NOT NULL
 )";
 
+
 // Execute the SQL query to create the table
 if (mysqli_query($conn, $sql_create_table_client)) {
     echo "Table Client created successfully";
@@ -22,6 +23,14 @@ if (mysqli_query($conn, $sql_create_table_client)) {
     echo "Error creating table: " . mysqli_error($conn);
 }
 
+/*
+$sql_insert_values = "
+INSERT INTO Client (client_name, client_phone, client_email, client_adr, password) VALUES
+('Ilyass', '123456789', 'john.doe@example.com', '123 Main Street', '" . password_hash('password1', PASSWORD_DEFAULT) . "'),
+('Kholod', '987654321', 'jane.smith@example.com', '456 Oak Avenue', '" . password_hash('password2', PASSWORD_DEFAULT) . "'),
+('Hafssa', '111223344', 'bob.johnson@example.com', '789 Pine Road', '" . password_hash('password3', PASSWORD_DEFAULT) . "')";
+$req=mysqli_query($conn,$sql_insert_values);
+*/
 
 // SQL to create table Annonce
 
