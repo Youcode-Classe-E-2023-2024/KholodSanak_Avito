@@ -36,7 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-<h2>Welcome to the Dashboard</h2>
 
 <!-- Add Annonce Form -->
 
@@ -73,7 +72,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </div>
 
+<div>
+    <a href="index.php">
+        <span  class="text-xl"  >&lArr;</span> Back to Home
+    </a>
 
-<p><a href="index.php">Back to Home</a></p>
+</div>
+
 </body>
 </html>

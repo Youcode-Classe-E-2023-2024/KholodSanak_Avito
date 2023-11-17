@@ -9,6 +9,7 @@ mysqli_select_db($conn, 'avito');
 $sql_fetch_annonces = "SELECT * FROM Annonces";
 $result_fetch_annonces = mysqli_query($conn, $sql_fetch_annonces);
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

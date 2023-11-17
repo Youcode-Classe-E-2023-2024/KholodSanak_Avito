@@ -37,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modify_annonce"])) {
 </head>
 <body>
 
-<h2>Welcome to the Dashboard</h2>
 
 <!-- Modify Annonce Form -->
 
@@ -81,7 +80,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modify_annonce"])) {
 
     </div>
 
-<p><a href="index.php">Back to Home</a></p>
+    <div>
+        <a href="index.php">
+            <span  class="text-xl"  >&lArr;</span> Back to Home
+        </a>
+
+    </div>
 </body>
 </html>
 

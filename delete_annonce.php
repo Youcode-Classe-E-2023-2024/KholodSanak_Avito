@@ -33,7 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_annonce"])) {
 </head>
 <body>
 
-<h2>Welcome to the Dashboard</h2>
 
 <!-- Delete Annonce Form -->
 
@@ -59,7 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_annonce"])) {
 
 </div>
 
+    <div>
+        <a href="index.php">
+            <span  class="text-xl"  >&lArr;</span> Back to Home
+        </a>
 
-<p><a href="index.php">Back to Home</a></p>
+    </div>
 </body>
 </html>
