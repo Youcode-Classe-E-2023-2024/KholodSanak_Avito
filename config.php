@@ -12,18 +12,24 @@ try {
     echo "Not connected: ";
 }
 //check connection
-if($conn){
+/*
+ * if($conn){
     echo "You are connected !";
 }
 else{
     echo "Could not connect";
 }
+ */
+
 
 // Create database
 $sql_create_db = "CREATE DATABASE IF NOT EXISTS avito";
-
-if (mysqli_query($conn, $sql_create_db)) {
+$req=mysqli_query($conn, $sql_create_db);
+/*
+ * if (mysqli_query($conn, $sql_create_db)) {
     echo "Database created successfully";
 } else {
     echo "Error creating database: " . mysqli_error($conn);
 }
+ */
+
