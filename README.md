@@ -38,8 +38,10 @@ Before you begin, ensure you have the following requirements installed on your s
 
 1. Start your web server.
 2. Open the project in your web browser:
+   
 ```bash
   http://localhost/path/to/avito-annonces/index.php
+
 3.You should see a list of annonces, and you can use the provided buttons to add, modify, or delete annonces.
 
 ## Contributing
@@ -48,11 +50,15 @@ If you'd like to contribute to this project, please follow these steps:
 
 1.Fork the repository.
 2.Create a new branch:
+
 ```bash
    git checkout -b feature/your-feature-name
+
 3.Make your changes and commit them:
+
 ```bash
-   git commit -m "Add your commit message here"
+   git commit -m "Add your commit message here
+
 4.Push to the branch:
 ```bash
    git push origin feature/your-feature-name
