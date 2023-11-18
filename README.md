@@ -5,6 +5,8 @@ This project is a simple PHP application for listing and managing annonces using
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Use Case Diagram](#UseCaseDiagram)
+- [Class Diagram](ClassDiagram)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
