@@ -15,6 +15,14 @@ This project is a simple PHP application for listing and managing annonces using
 
 This PHP application is designed to display a list of annonces fetched from a MySQL database. It allows users to view existing annonces, add new annonces, modify existing ones, and delete annonces.
 
+## Use Case Diagram
+File: use_case_diagram_avito.png
+Description: This file contains the use case diagram illustrating the various use cases of a user in Avito annonces site.
+
+## Class Diagram
+File: Avito_class_diagram.png
+Description: This file contains the class diagram outlining the essential classes and their fonctionnalities in the Avito annonces site.
+
 ## Prerequisites
 
 Before you begin, ensure you have the following requirements installed on your system:
